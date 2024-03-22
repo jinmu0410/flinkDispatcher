@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>flink-client</module>
+        <module>flink-sql-gateway-server</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -16,6 +17,20 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <flink.version>1.17.1</flink.version>
+        <flink.main.version>1.17</flink.main.version>
+        <satoken.version>1.35.0.RC</satoken.version>
+        <spring-boot-admin.version>3.1.5</spring-boot-admin.version>
+        <spring-boot.mybatis>3.0.2</spring-boot.mybatis>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
+        <junit.version>4.13.2</junit.version>
+        <slf4j-api.version>.7.21</slf4j-api.version>
+        <log4j-slf4j.version>2.12.1</log4j-slf4j.version>
+        <gson.version>2.9.1</gson.version>
+        <fasterxml.jackson>2.16.1</fasterxml.jackson>
+
+
     </properties>
 
 </project>

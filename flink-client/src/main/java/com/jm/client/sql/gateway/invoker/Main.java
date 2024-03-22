@@ -1,4 +1,4 @@
-package com.jm.flink;
+package com.jm.client.sql.gateway.invoker;
 
 public class Main {
     public static void main(String[] args) {
