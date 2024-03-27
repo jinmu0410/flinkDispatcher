@@ -26,55 +26,55 @@ import java.io.IOException;
  */
 @JsonAdapter(RowKind.Adapter.class)
 public enum RowKind {
-  
-  INSERT("INSERT"),
-  
-  UPDATE_BEFORE("UPDATE_BEFORE"),
-  
-  UPDATE_AFTER("UPDATE_AFTER"),
-  
-  DELETE("DELETE");
 
-  private String value;
+    INSERT("INSERT"),
 
-  RowKind(String value) {
-    this.value = value;
-  }
+    UPDATE_BEFORE("UPDATE_BEFORE"),
 
-  public String getValue() {
-    return value;
-  }
+    UPDATE_AFTER("UPDATE_AFTER"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    DELETE("DELETE");
 
-  public static RowKind fromValue(String value) {
-    for (RowKind b : RowKind.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    private String value;
+
+    RowKind(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<RowKind> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final RowKind enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public RowKind read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return RowKind.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
 
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-    String value = jsonElement.getAsString();
-    RowKind.fromValue(value);
-  }
+    public static RowKind fromValue(String value) {
+        for (RowKind b : RowKind.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<RowKind> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final RowKind enumeration) throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public RowKind read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return RowKind.fromValue(value);
+        }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        String value = jsonElement.getAsString();
+        RowKind.fromValue(value);
+    }
 }
 

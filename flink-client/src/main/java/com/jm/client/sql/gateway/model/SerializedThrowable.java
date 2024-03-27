@@ -32,153 +32,153 @@ import java.util.Set;
  */
 
 public class SerializedThrowable {
-  public static final String SERIALIZED_NAME_SERIALIZED_THROWABLE = "serialized-throwable";
-  @SerializedName(SERIALIZED_NAME_SERIALIZED_THROWABLE)
-  private File serializedThrowable;
+    public static final String SERIALIZED_NAME_SERIALIZED_THROWABLE = "serialized-throwable";
+    @SerializedName(SERIALIZED_NAME_SERIALIZED_THROWABLE)
+    private File serializedThrowable;
 
-  public SerializedThrowable() {
-  }
-
-  public SerializedThrowable serializedThrowable(File serializedThrowable) {
-    this.serializedThrowable = serializedThrowable;
-    return this;
-  }
-
-   /**
-   * Get serializedThrowable
-   * @return serializedThrowable
-  **/
-  //@javax.annotation.Nullable
-  public File getSerializedThrowable() {
-    return serializedThrowable;
-  }
-
-  public void setSerializedThrowable(File serializedThrowable) {
-    this.serializedThrowable = serializedThrowable;
-  }
-
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public SerializedThrowable() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public SerializedThrowable serializedThrowable(File serializedThrowable) {
+        this.serializedThrowable = serializedThrowable;
+        return this;
     }
-    SerializedThrowable serializedThrowable = (SerializedThrowable) o;
-    return Objects.equals(this.serializedThrowable, serializedThrowable.serializedThrowable);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(serializedThrowable);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class SerializedThrowable {\n");
-    sb.append("    serializedThrowable: ").append(toIndentedString(serializedThrowable)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get serializedThrowable
+     *
+     * @return serializedThrowable
+     **/
+    //@javax.annotation.Nullable
+    public File getSerializedThrowable() {
+        return serializedThrowable;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public void setSerializedThrowable(File serializedThrowable) {
+        this.serializedThrowable = serializedThrowable;
+    }
 
 
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("serialized-throwable");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to SerializedThrowable
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!SerializedThrowable.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SerializedThrowable is not found in the empty JSON string", SerializedThrowable.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!SerializedThrowable.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SerializedThrowable` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
     @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!SerializedThrowable.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'SerializedThrowable' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<SerializedThrowable> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(SerializedThrowable.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<SerializedThrowable>() {
-           @Override
-           public void write(JsonWriter out, SerializedThrowable value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public SerializedThrowable read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        SerializedThrowable serializedThrowable = (SerializedThrowable) o;
+        return Objects.equals(this.serializedThrowable, serializedThrowable.serializedThrowable);
     }
-  }
 
- /**
-  * Create an instance of SerializedThrowable given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SerializedThrowable
-  * @throws IOException if the JSON string is invalid with respect to SerializedThrowable
-  */
-  public static SerializedThrowable fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, SerializedThrowable.class);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(serializedThrowable);
+    }
 
- /**
-  * Convert an instance of SerializedThrowable to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class SerializedThrowable {\n");
+        sb.append("    serializedThrowable: ").append(toIndentedString(serializedThrowable)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+
+
+    public static HashSet<String> openapiFields;
+    public static HashSet<String> openapiRequiredFields;
+
+    static {
+        // a set of all properties/fields (JSON key names)
+        openapiFields = new HashSet<String>();
+        openapiFields.add("serialized-throwable");
+
+        // a set of required properties/fields (JSON key names)
+        openapiRequiredFields = new HashSet<String>();
+    }
+
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to SerializedThrowable
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        if (jsonElement == null) {
+            if (!SerializedThrowable.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+                throw new IllegalArgumentException(String.format("The required field(s) %s in SerializedThrowable is not found in the empty JSON string", SerializedThrowable.openapiRequiredFields.toString()));
+            }
+        }
+
+        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+        // check to see if the JSON string contains additional fields
+        for (Map.Entry<String, JsonElement> entry : entries) {
+            if (!SerializedThrowable.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SerializedThrowable` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+            }
+        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+    }
+
+    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+            if (!SerializedThrowable.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'SerializedThrowable' and its subtypes
+            }
+            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+            final TypeAdapter<SerializedThrowable> thisAdapter
+                    = gson.getDelegateAdapter(this, TypeToken.get(SerializedThrowable.class));
+
+            return (TypeAdapter<T>) new TypeAdapter<SerializedThrowable>() {
+                @Override
+                public void write(JsonWriter out, SerializedThrowable value) throws IOException {
+                    JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+                    elementAdapter.write(out, obj);
+                }
+
+                @Override
+                public SerializedThrowable read(JsonReader in) throws IOException {
+                    JsonElement jsonElement = elementAdapter.read(in);
+                    validateJsonElement(jsonElement);
+                    return thisAdapter.fromJsonTree(jsonElement);
+                }
+
+            }.nullSafe();
+        }
+    }
+
+    /**
+     * Create an instance of SerializedThrowable given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of SerializedThrowable
+     * @throws IOException if the JSON string is invalid with respect to SerializedThrowable
+     */
+    public static SerializedThrowable fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, SerializedThrowable.class);
+    }
+
+    /**
+     * Convert an instance of SerializedThrowable to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

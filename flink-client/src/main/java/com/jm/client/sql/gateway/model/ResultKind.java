@@ -26,51 +26,51 @@ import java.io.IOException;
  */
 @JsonAdapter(ResultKind.Adapter.class)
 public enum ResultKind {
-  
-  SUCCESS("SUCCESS"),
-  
-  SUCCESS_WITH_CONTENT("SUCCESS_WITH_CONTENT");
 
-  private String value;
+    SUCCESS("SUCCESS"),
 
-  ResultKind(String value) {
-    this.value = value;
-  }
+    SUCCESS_WITH_CONTENT("SUCCESS_WITH_CONTENT");
 
-  public String getValue() {
-    return value;
-  }
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static ResultKind fromValue(String value) {
-    for (ResultKind b : ResultKind.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    ResultKind(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<ResultKind> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final ResultKind enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public ResultKind read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return ResultKind.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
 
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-    String value = jsonElement.getAsString();
-    ResultKind.fromValue(value);
-  }
+    public static ResultKind fromValue(String value) {
+        for (ResultKind b : ResultKind.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ResultKind> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final ResultKind enumeration) throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public ResultKind read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return ResultKind.fromValue(value);
+        }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        String value = jsonElement.getAsString();
+        ResultKind.fromValue(value);
+    }
 }
 

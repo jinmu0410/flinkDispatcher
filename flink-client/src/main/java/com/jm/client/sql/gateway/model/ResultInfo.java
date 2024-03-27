@@ -28,321 +28,327 @@ import java.util.*;
  */
 
 public class ResultInfo {
-  public static final String SERIALIZED_NAME_COLUMN_INFOS = "columnInfos";
-  @SerializedName(SERIALIZED_NAME_COLUMN_INFOS)
-  private List<ColumnInfo> columnInfos;
+    public static final String SERIALIZED_NAME_COLUMN_INFOS = "columnInfos";
+    @SerializedName(SERIALIZED_NAME_COLUMN_INFOS)
+    private List<ColumnInfo> columnInfos;
 
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private List<RowData> data;
+    public static final String SERIALIZED_NAME_DATA = "data";
+    @SerializedName(SERIALIZED_NAME_DATA)
+    private List<RowData> data;
 
-  public static final String SERIALIZED_NAME_FIELD_GETTERS = "fieldGetters";
-  @SerializedName(SERIALIZED_NAME_FIELD_GETTERS)
-  private List<Object> fieldGetters;
+    public static final String SERIALIZED_NAME_FIELD_GETTERS = "fieldGetters";
+    @SerializedName(SERIALIZED_NAME_FIELD_GETTERS)
+    private List<Object> fieldGetters;
 
-  public static final String SERIALIZED_NAME_RESULT_SCHEMA = "resultSchema";
-  @SerializedName(SERIALIZED_NAME_RESULT_SCHEMA)
-  private ResolvedSchema resultSchema;
+    public static final String SERIALIZED_NAME_RESULT_SCHEMA = "resultSchema";
+    @SerializedName(SERIALIZED_NAME_RESULT_SCHEMA)
+    private ResolvedSchema resultSchema;
 
-  public static final String SERIALIZED_NAME_ROW_FORMAT = "rowFormat";
-  @SerializedName(SERIALIZED_NAME_ROW_FORMAT)
-  private RowFormat rowFormat;
+    public static final String SERIALIZED_NAME_ROW_FORMAT = "rowFormat";
+    @SerializedName(SERIALIZED_NAME_ROW_FORMAT)
+    private RowFormat rowFormat;
 
-  public ResultInfo() {
-  }
-
-  public ResultInfo columnInfos(List<ColumnInfo> columnInfos) {
-    this.columnInfos = columnInfos;
-    return this;
-  }
-
-  public ResultInfo addColumnInfosItem(ColumnInfo columnInfosItem) {
-    if (this.columnInfos == null) {
-      this.columnInfos = new ArrayList<>();
+    public ResultInfo() {
     }
-    this.columnInfos.add(columnInfosItem);
-    return this;
-  }
 
-   /**
-   * Get columnInfos
-   * @return columnInfos
-  **/
-  //@javax.annotation.Nullable
-  public List<ColumnInfo> getColumnInfos() {
-    return columnInfos;
-  }
-
-  public void setColumnInfos(List<ColumnInfo> columnInfos) {
-    this.columnInfos = columnInfos;
-  }
-
-
-  public ResultInfo data(List<RowData> data) {
-    this.data = data;
-    return this;
-  }
-
-  public ResultInfo addDataItem(RowData dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<>();
+    public ResultInfo columnInfos(List<ColumnInfo> columnInfos) {
+        this.columnInfos = columnInfos;
+        return this;
     }
-    this.data.add(dataItem);
-    return this;
-  }
 
-   /**
-   * Get data
-   * @return data
-  **/
-  //@javax.annotation.Nullable
-  public List<RowData> getData() {
-    return data;
-  }
-
-  public void setData(List<RowData> data) {
-    this.data = data;
-  }
-
-
-  public ResultInfo fieldGetters(List<Object> fieldGetters) {
-    this.fieldGetters = fieldGetters;
-    return this;
-  }
-
-  public ResultInfo addFieldGettersItem(Object fieldGettersItem) {
-    if (this.fieldGetters == null) {
-      this.fieldGetters = new ArrayList<>();
-    }
-    this.fieldGetters.add(fieldGettersItem);
-    return this;
-  }
-
-   /**
-   * Get fieldGetters
-   * @return fieldGetters
-  **/
-  //@javax.annotation.Nullable
-  public List<Object> getFieldGetters() {
-    return fieldGetters;
-  }
-
-  public void setFieldGetters(List<Object> fieldGetters) {
-    this.fieldGetters = fieldGetters;
-  }
-
-
-  public ResultInfo resultSchema(ResolvedSchema resultSchema) {
-    this.resultSchema = resultSchema;
-    return this;
-  }
-
-   /**
-   * Get resultSchema
-   * @return resultSchema
-  **/
-  //@javax.annotation.Nullable
-  public ResolvedSchema getResultSchema() {
-    return resultSchema;
-  }
-
-  public void setResultSchema(ResolvedSchema resultSchema) {
-    this.resultSchema = resultSchema;
-  }
-
-
-  public ResultInfo rowFormat(RowFormat rowFormat) {
-    this.rowFormat = rowFormat;
-    return this;
-  }
-
-   /**
-   * Get rowFormat
-   * @return rowFormat
-  **/
-  //@javax.annotation.Nullable
-  public RowFormat getRowFormat() {
-    return rowFormat;
-  }
-
-  public void setRowFormat(RowFormat rowFormat) {
-    this.rowFormat = rowFormat;
-  }
-
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    ResultInfo resultInfo = (ResultInfo) o;
-    return Objects.equals(this.columnInfos, resultInfo.columnInfos) &&
-        Objects.equals(this.data, resultInfo.data) &&
-        Objects.equals(this.fieldGetters, resultInfo.fieldGetters) &&
-        Objects.equals(this.resultSchema, resultInfo.resultSchema) &&
-        Objects.equals(this.rowFormat, resultInfo.rowFormat);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(columnInfos, data, fieldGetters, resultSchema, rowFormat);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ResultInfo {\n");
-    sb.append("    columnInfos: ").append(toIndentedString(columnInfos)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
-    sb.append("    fieldGetters: ").append(toIndentedString(fieldGetters)).append("\n");
-    sb.append("    resultSchema: ").append(toIndentedString(resultSchema)).append("\n");
-    sb.append("    rowFormat: ").append(toIndentedString(rowFormat)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
-  }
-
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("columnInfos");
-    openapiFields.add("data");
-    openapiFields.add("fieldGetters");
-    openapiFields.add("resultSchema");
-    openapiFields.add("rowFormat");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ResultInfo
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ResultInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResultInfo is not found in the empty JSON string", ResultInfo.openapiRequiredFields.toString()));
+    public ResultInfo addColumnInfosItem(ColumnInfo columnInfosItem) {
+        if (this.columnInfos == null) {
+            this.columnInfos = new ArrayList<>();
         }
-      }
+        this.columnInfos.add(columnInfosItem);
+        return this;
+    }
 
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ResultInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResultInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+    /**
+     * Get columnInfos
+     *
+     * @return columnInfos
+     **/
+    //@javax.annotation.Nullable
+    public List<ColumnInfo> getColumnInfos() {
+        return columnInfos;
+    }
+
+    public void setColumnInfos(List<ColumnInfo> columnInfos) {
+        this.columnInfos = columnInfos;
+    }
+
+
+    public ResultInfo data(List<RowData> data) {
+        this.data = data;
+        return this;
+    }
+
+    public ResultInfo addDataItem(RowData dataItem) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
         }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("columnInfos") != null && !jsonObj.get("columnInfos").isJsonNull()) {
-        JsonArray jsonArraycolumnInfos = jsonObj.getAsJsonArray("columnInfos");
-        if (jsonArraycolumnInfos != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("columnInfos").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `columnInfos` to be an array in the JSON string but got `%s`", jsonObj.get("columnInfos").toString()));
-          }
+        this.data.add(dataItem);
+        return this;
+    }
 
-          // validate the optional field `columnInfos` (array)
-          for (int i = 0; i < jsonArraycolumnInfos.size(); i++) {
-            ColumnInfo.validateJsonElement(jsonArraycolumnInfos.get(i));
-          };
+    /**
+     * Get data
+     *
+     * @return data
+     **/
+    //@javax.annotation.Nullable
+    public List<RowData> getData() {
+        return data;
+    }
+
+    public void setData(List<RowData> data) {
+        this.data = data;
+    }
+
+
+    public ResultInfo fieldGetters(List<Object> fieldGetters) {
+        this.fieldGetters = fieldGetters;
+        return this;
+    }
+
+    public ResultInfo addFieldGettersItem(Object fieldGettersItem) {
+        if (this.fieldGetters == null) {
+            this.fieldGetters = new ArrayList<>();
         }
-      }
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
+        this.fieldGetters.add(fieldGettersItem);
+        return this;
+    }
 
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            RowData.validateJsonElement(jsonArraydata.get(i));
-          };
-        }
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("fieldGetters") != null && !jsonObj.get("fieldGetters").isJsonNull() && !jsonObj.get("fieldGetters").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fieldGetters` to be an array in the JSON string but got `%s`", jsonObj.get("fieldGetters").toString()));
-      }
-      // validate the optional field `resultSchema`
-      if (jsonObj.get("resultSchema") != null && !jsonObj.get("resultSchema").isJsonNull()) {
-        ResolvedSchema.validateJsonElement(jsonObj.get("resultSchema"));
-      }
-      // validate the optional field `rowFormat`
-      if (jsonObj.get("rowFormat") != null && !jsonObj.get("rowFormat").isJsonNull()) {
-        RowFormat.validateJsonElement(jsonObj.get("rowFormat"));
-      }
-  }
+    /**
+     * Get fieldGetters
+     *
+     * @return fieldGetters
+     **/
+    //@javax.annotation.Nullable
+    public List<Object> getFieldGetters() {
+        return fieldGetters;
+    }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
+    public void setFieldGetters(List<Object> fieldGetters) {
+        this.fieldGetters = fieldGetters;
+    }
+
+
+    public ResultInfo resultSchema(ResolvedSchema resultSchema) {
+        this.resultSchema = resultSchema;
+        return this;
+    }
+
+    /**
+     * Get resultSchema
+     *
+     * @return resultSchema
+     **/
+    //@javax.annotation.Nullable
+    public ResolvedSchema getResultSchema() {
+        return resultSchema;
+    }
+
+    public void setResultSchema(ResolvedSchema resultSchema) {
+        this.resultSchema = resultSchema;
+    }
+
+
+    public ResultInfo rowFormat(RowFormat rowFormat) {
+        this.rowFormat = rowFormat;
+        return this;
+    }
+
+    /**
+     * Get rowFormat
+     *
+     * @return rowFormat
+     **/
+    //@javax.annotation.Nullable
+    public RowFormat getRowFormat() {
+        return rowFormat;
+    }
+
+    public void setRowFormat(RowFormat rowFormat) {
+        this.rowFormat = rowFormat;
+    }
+
+
     @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResultInfo.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResultInfo' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResultInfo> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResultInfo.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResultInfo>() {
-           @Override
-           public void write(JsonWriter out, ResultInfo value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResultInfo read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ResultInfo resultInfo = (ResultInfo) o;
+        return Objects.equals(this.columnInfos, resultInfo.columnInfos) &&
+                Objects.equals(this.data, resultInfo.data) &&
+                Objects.equals(this.fieldGetters, resultInfo.fieldGetters) &&
+                Objects.equals(this.resultSchema, resultInfo.resultSchema) &&
+                Objects.equals(this.rowFormat, resultInfo.rowFormat);
     }
-  }
 
- /**
-  * Create an instance of ResultInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResultInfo
-  * @throws IOException if the JSON string is invalid with respect to ResultInfo
-  */
-  public static ResultInfo fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResultInfo.class);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(columnInfos, data, fieldGetters, resultSchema, rowFormat);
+    }
 
- /**
-  * Convert an instance of ResultInfo to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ResultInfo {\n");
+        sb.append("    columnInfos: ").append(toIndentedString(columnInfos)).append("\n");
+        sb.append("    data: ").append(toIndentedString(data)).append("\n");
+        sb.append("    fieldGetters: ").append(toIndentedString(fieldGetters)).append("\n");
+        sb.append("    resultSchema: ").append(toIndentedString(resultSchema)).append("\n");
+        sb.append("    rowFormat: ").append(toIndentedString(rowFormat)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+
+
+    public static HashSet<String> openapiFields;
+    public static HashSet<String> openapiRequiredFields;
+
+    static {
+        // a set of all properties/fields (JSON key names)
+        openapiFields = new HashSet<String>();
+        openapiFields.add("columnInfos");
+        openapiFields.add("data");
+        openapiFields.add("fieldGetters");
+        openapiFields.add("resultSchema");
+        openapiFields.add("rowFormat");
+
+        // a set of required properties/fields (JSON key names)
+        openapiRequiredFields = new HashSet<String>();
+    }
+
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to ResultInfo
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        if (jsonElement == null) {
+            if (!ResultInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+                throw new IllegalArgumentException(String.format("The required field(s) %s in ResultInfo is not found in the empty JSON string", ResultInfo.openapiRequiredFields.toString()));
+            }
+        }
+
+        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+        // check to see if the JSON string contains additional fields
+        for (Map.Entry<String, JsonElement> entry : entries) {
+            if (!ResultInfo.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResultInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+            }
+        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+        if (jsonObj.get("columnInfos") != null && !jsonObj.get("columnInfos").isJsonNull()) {
+            JsonArray jsonArraycolumnInfos = jsonObj.getAsJsonArray("columnInfos");
+            if (jsonArraycolumnInfos != null) {
+                // ensure the json data is an array
+                if (!jsonObj.get("columnInfos").isJsonArray()) {
+                    throw new IllegalArgumentException(String.format("Expected the field `columnInfos` to be an array in the JSON string but got `%s`", jsonObj.get("columnInfos").toString()));
+                }
+
+                // validate the optional field `columnInfos` (array)
+                for (int i = 0; i < jsonArraycolumnInfos.size(); i++) {
+                    ColumnInfo.validateJsonElement(jsonArraycolumnInfos.get(i));
+                }
+                ;
+            }
+        }
+        if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
+            JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+            if (jsonArraydata != null) {
+                // ensure the json data is an array
+                if (!jsonObj.get("data").isJsonArray()) {
+                    throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+                }
+
+                // validate the optional field `data` (array)
+                for (int i = 0; i < jsonArraydata.size(); i++) {
+                    RowData.validateJsonElement(jsonArraydata.get(i));
+                }
+                ;
+            }
+        }
+        // ensure the optional json data is an array if present
+        if (jsonObj.get("fieldGetters") != null && !jsonObj.get("fieldGetters").isJsonNull() && !jsonObj.get("fieldGetters").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `fieldGetters` to be an array in the JSON string but got `%s`", jsonObj.get("fieldGetters").toString()));
+        }
+        // validate the optional field `resultSchema`
+        if (jsonObj.get("resultSchema") != null && !jsonObj.get("resultSchema").isJsonNull()) {
+            ResolvedSchema.validateJsonElement(jsonObj.get("resultSchema"));
+        }
+        // validate the optional field `rowFormat`
+        if (jsonObj.get("rowFormat") != null && !jsonObj.get("rowFormat").isJsonNull()) {
+            RowFormat.validateJsonElement(jsonObj.get("rowFormat"));
+        }
+    }
+
+    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+            if (!ResultInfo.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'ResultInfo' and its subtypes
+            }
+            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+            final TypeAdapter<ResultInfo> thisAdapter
+                    = gson.getDelegateAdapter(this, TypeToken.get(ResultInfo.class));
+
+            return (TypeAdapter<T>) new TypeAdapter<ResultInfo>() {
+                @Override
+                public void write(JsonWriter out, ResultInfo value) throws IOException {
+                    JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+                    elementAdapter.write(out, obj);
+                }
+
+                @Override
+                public ResultInfo read(JsonReader in) throws IOException {
+                    JsonElement jsonElement = elementAdapter.read(in);
+                    validateJsonElement(jsonElement);
+                    return thisAdapter.fromJsonTree(jsonElement);
+                }
+
+            }.nullSafe();
+        }
+    }
+
+    /**
+     * Create an instance of ResultInfo given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of ResultInfo
+     * @throws IOException if the JSON string is invalid with respect to ResultInfo
+     */
+    public static ResultInfo fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, ResultInfo.class);
+    }
+
+    /**
+     * Convert an instance of ResultInfo to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

@@ -12,7 +12,9 @@ public class FlinkSqlGatewayExample {
 
     private static final String YARN_APP_ID = "application_1709610983537_0086";
     private static final String FLINK_SQL_GATEWAY = "http://192.168.201.75:8083";
-    private FlinkSqlGatewayExample() {}
+
+    private FlinkSqlGatewayExample() {
+    }
 
     public static void main(String[] args) throws ApiException {
         DefaultApi api = FlinkSqlGateway.sqlGatewayApi(FLINK_SQL_GATEWAY);
@@ -21,7 +23,6 @@ public class FlinkSqlGatewayExample {
 
         // run on K8S
         runOnKubernetes(api);
-
 
 
         // run with UDF
@@ -252,9 +253,9 @@ public class FlinkSqlGatewayExample {
     /**
      * stop job
      *
-     * @since Flink 1.17
      * @param api
      * @throws ApiException
+     * @since Flink 1.17
      */
     private static void stopJob(DefaultApi api) throws ApiException {
         OpenSessionResponseBody response = api.openSession(new OpenSessionRequestBody()

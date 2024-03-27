@@ -28,7 +28,7 @@ public class ApiResponse<T> {
      * <p>Constructor for ApiResponse.</p>
      *
      * @param statusCode The status code of HTTP response
-     * @param headers The headers of HTTP response
+     * @param headers    The headers of HTTP response
      */
     public ApiResponse(int statusCode, Map<String, List<String>> headers) {
         this(statusCode, headers, null);
@@ -38,8 +38,8 @@ public class ApiResponse<T> {
      * <p>Constructor for ApiResponse.</p>
      *
      * @param statusCode The status code of HTTP response
-     * @param headers The headers of HTTP response
-     * @param data The object deserialized from response bod
+     * @param headers    The headers of HTTP response
+     * @param data       The object deserialized from response bod
      */
     public ApiResponse(int statusCode, Map<String, List<String>> headers, T data) {
         this.statusCode = statusCode;

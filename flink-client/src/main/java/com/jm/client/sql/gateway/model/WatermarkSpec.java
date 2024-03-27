@@ -31,186 +31,187 @@ import java.util.Set;
  */
 
 public class WatermarkSpec {
-  public static final String SERIALIZED_NAME_ROWTIME_ATTRIBUTE = "rowtimeAttribute";
-  @SerializedName(SERIALIZED_NAME_ROWTIME_ATTRIBUTE)
-  private String rowtimeAttribute;
+    public static final String SERIALIZED_NAME_ROWTIME_ATTRIBUTE = "rowtimeAttribute";
+    @SerializedName(SERIALIZED_NAME_ROWTIME_ATTRIBUTE)
+    private String rowtimeAttribute;
 
-  public static final String SERIALIZED_NAME_WATERMARK_EXPRESSION = "watermarkExpression";
-  @SerializedName(SERIALIZED_NAME_WATERMARK_EXPRESSION)
-  private ResolvedExpression watermarkExpression;
+    public static final String SERIALIZED_NAME_WATERMARK_EXPRESSION = "watermarkExpression";
+    @SerializedName(SERIALIZED_NAME_WATERMARK_EXPRESSION)
+    private ResolvedExpression watermarkExpression;
 
-  public WatermarkSpec() {
-  }
-
-  public WatermarkSpec rowtimeAttribute(String rowtimeAttribute) {
-    this.rowtimeAttribute = rowtimeAttribute;
-    return this;
-  }
-
-   /**
-   * Get rowtimeAttribute
-   * @return rowtimeAttribute
-  **/
-  //@javax.annotation.Nullable
-  public String getRowtimeAttribute() {
-    return rowtimeAttribute;
-  }
-
-  public void setRowtimeAttribute(String rowtimeAttribute) {
-    this.rowtimeAttribute = rowtimeAttribute;
-  }
-
-
-  public WatermarkSpec watermarkExpression(ResolvedExpression watermarkExpression) {
-    this.watermarkExpression = watermarkExpression;
-    return this;
-  }
-
-   /**
-   * Get watermarkExpression
-   * @return watermarkExpression
-  **/
-  //@javax.annotation.Nullable
-  public ResolvedExpression getWatermarkExpression() {
-    return watermarkExpression;
-  }
-
-  public void setWatermarkExpression(ResolvedExpression watermarkExpression) {
-    this.watermarkExpression = watermarkExpression;
-  }
-
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public WatermarkSpec() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public WatermarkSpec rowtimeAttribute(String rowtimeAttribute) {
+        this.rowtimeAttribute = rowtimeAttribute;
+        return this;
     }
-    WatermarkSpec watermarkSpec = (WatermarkSpec) o;
-    return Objects.equals(this.rowtimeAttribute, watermarkSpec.rowtimeAttribute) &&
-        Objects.equals(this.watermarkExpression, watermarkSpec.watermarkExpression);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(rowtimeAttribute, watermarkExpression);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class WatermarkSpec {\n");
-    sb.append("    rowtimeAttribute: ").append(toIndentedString(rowtimeAttribute)).append("\n");
-    sb.append("    watermarkExpression: ").append(toIndentedString(watermarkExpression)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get rowtimeAttribute
+     *
+     * @return rowtimeAttribute
+     **/
+    //@javax.annotation.Nullable
+    public String getRowtimeAttribute() {
+        return rowtimeAttribute;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public void setRowtimeAttribute(String rowtimeAttribute) {
+        this.rowtimeAttribute = rowtimeAttribute;
+    }
 
 
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
+    public WatermarkSpec watermarkExpression(ResolvedExpression watermarkExpression) {
+        this.watermarkExpression = watermarkExpression;
+        return this;
+    }
 
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("rowtimeAttribute");
-    openapiFields.add("watermarkExpression");
+    /**
+     * Get watermarkExpression
+     *
+     * @return watermarkExpression
+     **/
+    //@javax.annotation.Nullable
+    public ResolvedExpression getWatermarkExpression() {
+        return watermarkExpression;
+    }
 
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
+    public void setWatermarkExpression(ResolvedExpression watermarkExpression) {
+        this.watermarkExpression = watermarkExpression;
+    }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to WatermarkSpec
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!WatermarkSpec.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in WatermarkSpec is not found in the empty JSON string", WatermarkSpec.openapiRequiredFields.toString()));
-        }
-      }
 
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!WatermarkSpec.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WatermarkSpec` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("rowtimeAttribute") != null && !jsonObj.get("rowtimeAttribute").isJsonNull()) && !jsonObj.get("rowtimeAttribute").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `rowtimeAttribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rowtimeAttribute").toString()));
-      }
-      // validate the optional field `watermarkExpression`
-      if (jsonObj.get("watermarkExpression") != null && !jsonObj.get("watermarkExpression").isJsonNull()) {
-        ResolvedExpression.validateJsonElement(jsonObj.get("watermarkExpression"));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
     @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!WatermarkSpec.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'WatermarkSpec' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<WatermarkSpec> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(WatermarkSpec.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<WatermarkSpec>() {
-           @Override
-           public void write(JsonWriter out, WatermarkSpec value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public WatermarkSpec read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        WatermarkSpec watermarkSpec = (WatermarkSpec) o;
+        return Objects.equals(this.rowtimeAttribute, watermarkSpec.rowtimeAttribute) &&
+                Objects.equals(this.watermarkExpression, watermarkSpec.watermarkExpression);
     }
-  }
 
- /**
-  * Create an instance of WatermarkSpec given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of WatermarkSpec
-  * @throws IOException if the JSON string is invalid with respect to WatermarkSpec
-  */
-  public static WatermarkSpec fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, WatermarkSpec.class);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(rowtimeAttribute, watermarkExpression);
+    }
 
- /**
-  * Convert an instance of WatermarkSpec to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class WatermarkSpec {\n");
+        sb.append("    rowtimeAttribute: ").append(toIndentedString(rowtimeAttribute)).append("\n");
+        sb.append("    watermarkExpression: ").append(toIndentedString(watermarkExpression)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+
+
+    public static HashSet<String> openapiFields;
+    public static HashSet<String> openapiRequiredFields;
+
+    static {
+        // a set of all properties/fields (JSON key names)
+        openapiFields = new HashSet<String>();
+        openapiFields.add("rowtimeAttribute");
+        openapiFields.add("watermarkExpression");
+
+        // a set of required properties/fields (JSON key names)
+        openapiRequiredFields = new HashSet<String>();
+    }
+
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to WatermarkSpec
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        if (jsonElement == null) {
+            if (!WatermarkSpec.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+                throw new IllegalArgumentException(String.format("The required field(s) %s in WatermarkSpec is not found in the empty JSON string", WatermarkSpec.openapiRequiredFields.toString()));
+            }
+        }
+
+        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+        // check to see if the JSON string contains additional fields
+        for (Map.Entry<String, JsonElement> entry : entries) {
+            if (!WatermarkSpec.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WatermarkSpec` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+            }
+        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+        if ((jsonObj.get("rowtimeAttribute") != null && !jsonObj.get("rowtimeAttribute").isJsonNull()) && !jsonObj.get("rowtimeAttribute").isJsonPrimitive()) {
+            throw new IllegalArgumentException(String.format("Expected the field `rowtimeAttribute` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rowtimeAttribute").toString()));
+        }
+        // validate the optional field `watermarkExpression`
+        if (jsonObj.get("watermarkExpression") != null && !jsonObj.get("watermarkExpression").isJsonNull()) {
+            ResolvedExpression.validateJsonElement(jsonObj.get("watermarkExpression"));
+        }
+    }
+
+    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+            if (!WatermarkSpec.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'WatermarkSpec' and its subtypes
+            }
+            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+            final TypeAdapter<WatermarkSpec> thisAdapter
+                    = gson.getDelegateAdapter(this, TypeToken.get(WatermarkSpec.class));
+
+            return (TypeAdapter<T>) new TypeAdapter<WatermarkSpec>() {
+                @Override
+                public void write(JsonWriter out, WatermarkSpec value) throws IOException {
+                    JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+                    elementAdapter.write(out, obj);
+                }
+
+                @Override
+                public WatermarkSpec read(JsonReader in) throws IOException {
+                    JsonElement jsonElement = elementAdapter.read(in);
+                    validateJsonElement(jsonElement);
+                    return thisAdapter.fromJsonTree(jsonElement);
+                }
+
+            }.nullSafe();
+        }
+    }
+
+    /**
+     * Create an instance of WatermarkSpec given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of WatermarkSpec
+     * @throws IOException if the JSON string is invalid with respect to WatermarkSpec
+     */
+    public static WatermarkSpec fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, WatermarkSpec.class);
+    }
+
+    /**
+     * Convert an instance of WatermarkSpec to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

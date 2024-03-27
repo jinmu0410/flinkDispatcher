@@ -10,7 +10,8 @@ import java.util.HashMap;
 
 public class FlinkSqlGateway {
 
-    private FlinkSqlGateway() {}
+    private FlinkSqlGateway() {
+    }
 
     public static DefaultApi sqlGatewayApi(String basePath) {
         ApiClient client = new ApiClient();

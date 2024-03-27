@@ -26,51 +26,51 @@ import java.io.IOException;
  */
 @JsonAdapter(RowFormat.Adapter.class)
 public enum RowFormat {
-  
-  JSON("JSON"),
-  
-  PLAIN_TEXT("PLAIN_TEXT");
 
-  private String value;
+    JSON("JSON"),
 
-  RowFormat(String value) {
-    this.value = value;
-  }
+    PLAIN_TEXT("PLAIN_TEXT");
 
-  public String getValue() {
-    return value;
-  }
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static RowFormat fromValue(String value) {
-    for (RowFormat b : RowFormat.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    RowFormat(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<RowFormat> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final RowFormat enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public RowFormat read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return RowFormat.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
 
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-    String value = jsonElement.getAsString();
-    RowFormat.fromValue(value);
-  }
+    public static RowFormat fromValue(String value) {
+        for (RowFormat b : RowFormat.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<RowFormat> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final RowFormat enumeration) throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public RowFormat read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return RowFormat.fromValue(value);
+        }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        String value = jsonElement.getAsString();
+        RowFormat.fromValue(value);
+    }
 }
 

@@ -31,301 +31,306 @@ import java.util.Set;
  */
 
 public class FetchResultsResponseBody {
-  public static final String SERIALIZED_NAME_JOB_I_D = "jobID";
-  @SerializedName(SERIALIZED_NAME_JOB_I_D)
-  private String jobID;
+    public static final String SERIALIZED_NAME_JOB_I_D = "jobID";
+    @SerializedName(SERIALIZED_NAME_JOB_I_D)
+    private String jobID;
 
-  public static final String SERIALIZED_NAME_NEXT_RESULT_URI = "nextResultUri";
-  @SerializedName(SERIALIZED_NAME_NEXT_RESULT_URI)
-  private String nextResultUri;
+    public static final String SERIALIZED_NAME_NEXT_RESULT_URI = "nextResultUri";
+    @SerializedName(SERIALIZED_NAME_NEXT_RESULT_URI)
+    private String nextResultUri;
 
-  public static final String SERIALIZED_NAME_QUERY_RESULT = "queryResult";
-  @SerializedName(SERIALIZED_NAME_QUERY_RESULT)
-  private Boolean queryResult;
+    public static final String SERIALIZED_NAME_QUERY_RESULT = "queryResult";
+    @SerializedName(SERIALIZED_NAME_QUERY_RESULT)
+    private Boolean queryResult;
 
-  public static final String SERIALIZED_NAME_RESULT_KIND = "resultKind";
-  @SerializedName(SERIALIZED_NAME_RESULT_KIND)
-  private ResultKind resultKind;
+    public static final String SERIALIZED_NAME_RESULT_KIND = "resultKind";
+    @SerializedName(SERIALIZED_NAME_RESULT_KIND)
+    private ResultKind resultKind;
 
-  public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
-  @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
-  private ResultType resultType;
+    public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
+    @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
+    private ResultType resultType;
 
-  public static final String SERIALIZED_NAME_RESULTS = "results";
-  @SerializedName(SERIALIZED_NAME_RESULTS)
-  private ResultInfo results;
+    public static final String SERIALIZED_NAME_RESULTS = "results";
+    @SerializedName(SERIALIZED_NAME_RESULTS)
+    private ResultInfo results;
 
-  public FetchResultsResponseBody() {
-  }
-
-  public FetchResultsResponseBody jobID(String jobID) {
-    this.jobID = jobID;
-    return this;
-  }
-
-   /**
-   * Get jobID
-   * @return jobID
-  **/
-  //@javax.annotation.Nullable
-  public String getJobID() {
-    return jobID;
-  }
-
-  public void setJobID(String jobID) {
-    this.jobID = jobID;
-  }
-
-
-  public FetchResultsResponseBody nextResultUri(String nextResultUri) {
-    this.nextResultUri = nextResultUri;
-    return this;
-  }
-
-   /**
-   * Get nextResultUri
-   * @return nextResultUri
-  **/
-  //@javax.annotation.Nullable
-  public String getNextResultUri() {
-    return nextResultUri;
-  }
-
-  public void setNextResultUri(String nextResultUri) {
-    this.nextResultUri = nextResultUri;
-  }
-
-
-  public FetchResultsResponseBody queryResult(Boolean queryResult) {
-    this.queryResult = queryResult;
-    return this;
-  }
-
-   /**
-   * Get queryResult
-   * @return queryResult
-  **/
-  //@javax.annotation.Nullable
-  public Boolean getQueryResult() {
-    return queryResult;
-  }
-
-  public void setQueryResult(Boolean queryResult) {
-    this.queryResult = queryResult;
-  }
-
-
-  public FetchResultsResponseBody resultKind(ResultKind resultKind) {
-    this.resultKind = resultKind;
-    return this;
-  }
-
-   /**
-   * Get resultKind
-   * @return resultKind
-  **/
-  //@javax.annotation.Nullable
-  public ResultKind getResultKind() {
-    return resultKind;
-  }
-
-  public void setResultKind(ResultKind resultKind) {
-    this.resultKind = resultKind;
-  }
-
-
-  public FetchResultsResponseBody resultType(ResultType resultType) {
-    this.resultType = resultType;
-    return this;
-  }
-
-   /**
-   * Get resultType
-   * @return resultType
-  **/
-  //@javax.annotation.Nullable
-  public ResultType getResultType() {
-    return resultType;
-  }
-
-  public void setResultType(ResultType resultType) {
-    this.resultType = resultType;
-  }
-
-
-  public FetchResultsResponseBody results(ResultInfo results) {
-    this.results = results;
-    return this;
-  }
-
-   /**
-   * Get results
-   * @return results
-  **/
-  //@javax.annotation.Nullable
-  public ResultInfo getResults() {
-    return results;
-  }
-
-  public void setResults(ResultInfo results) {
-    this.results = results;
-  }
-
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public FetchResultsResponseBody() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public FetchResultsResponseBody jobID(String jobID) {
+        this.jobID = jobID;
+        return this;
     }
-    FetchResultsResponseBody fetchResultsResponseBody = (FetchResultsResponseBody) o;
-    return Objects.equals(this.jobID, fetchResultsResponseBody.jobID) &&
-        Objects.equals(this.nextResultUri, fetchResultsResponseBody.nextResultUri) &&
-        Objects.equals(this.queryResult, fetchResultsResponseBody.queryResult) &&
-        Objects.equals(this.resultKind, fetchResultsResponseBody.resultKind) &&
-        Objects.equals(this.resultType, fetchResultsResponseBody.resultType) &&
-        Objects.equals(this.results, fetchResultsResponseBody.results);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(jobID, nextResultUri, queryResult, resultKind, resultType, results);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class FetchResultsResponseBody {\n");
-    sb.append("    jobID: ").append(toIndentedString(jobID)).append("\n");
-    sb.append("    nextResultUri: ").append(toIndentedString(nextResultUri)).append("\n");
-    sb.append("    queryResult: ").append(toIndentedString(queryResult)).append("\n");
-    sb.append("    resultKind: ").append(toIndentedString(resultKind)).append("\n");
-    sb.append("    resultType: ").append(toIndentedString(resultType)).append("\n");
-    sb.append("    results: ").append(toIndentedString(results)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get jobID
+     *
+     * @return jobID
+     **/
+    //@javax.annotation.Nullable
+    public String getJobID() {
+        return jobID;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public void setJobID(String jobID) {
+        this.jobID = jobID;
+    }
 
 
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
+    public FetchResultsResponseBody nextResultUri(String nextResultUri) {
+        this.nextResultUri = nextResultUri;
+        return this;
+    }
 
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("jobID");
-    openapiFields.add("nextResultUri");
-    openapiFields.add("queryResult");
-    openapiFields.add("resultKind");
-    openapiFields.add("resultType");
-    openapiFields.add("results");
+    /**
+     * Get nextResultUri
+     *
+     * @return nextResultUri
+     **/
+    //@javax.annotation.Nullable
+    public String getNextResultUri() {
+        return nextResultUri;
+    }
 
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
+    public void setNextResultUri(String nextResultUri) {
+        this.nextResultUri = nextResultUri;
+    }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to FetchResultsResponseBody
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!FetchResultsResponseBody.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in FetchResultsResponseBody is not found in the empty JSON string", FetchResultsResponseBody.openapiRequiredFields.toString()));
-        }
-      }
 
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!FetchResultsResponseBody.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FetchResultsResponseBody` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("jobID") != null && !jsonObj.get("jobID").isJsonNull()) && !jsonObj.get("jobID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `jobID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jobID").toString()));
-      }
-      if ((jsonObj.get("nextResultUri") != null && !jsonObj.get("nextResultUri").isJsonNull()) && !jsonObj.get("nextResultUri").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nextResultUri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nextResultUri").toString()));
-      }
-      // validate the optional field `resultKind`
-      if (jsonObj.get("resultKind") != null && !jsonObj.get("resultKind").isJsonNull()) {
-        ResultKind.validateJsonElement(jsonObj.get("resultKind"));
-      }
-      // validate the optional field `resultType`
-      if (jsonObj.get("resultType") != null && !jsonObj.get("resultType").isJsonNull()) {
-        ResultType.validateJsonElement(jsonObj.get("resultType"));
-      }
-      // validate the optional field `results`
-      if (jsonObj.get("results") != null && !jsonObj.get("results").isJsonNull()) {
-        ResultInfo.validateJsonElement(jsonObj.get("results"));
-      }
-  }
+    public FetchResultsResponseBody queryResult(Boolean queryResult) {
+        this.queryResult = queryResult;
+        return this;
+    }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
+    /**
+     * Get queryResult
+     *
+     * @return queryResult
+     **/
+    //@javax.annotation.Nullable
+    public Boolean getQueryResult() {
+        return queryResult;
+    }
+
+    public void setQueryResult(Boolean queryResult) {
+        this.queryResult = queryResult;
+    }
+
+
+    public FetchResultsResponseBody resultKind(ResultKind resultKind) {
+        this.resultKind = resultKind;
+        return this;
+    }
+
+    /**
+     * Get resultKind
+     *
+     * @return resultKind
+     **/
+    //@javax.annotation.Nullable
+    public ResultKind getResultKind() {
+        return resultKind;
+    }
+
+    public void setResultKind(ResultKind resultKind) {
+        this.resultKind = resultKind;
+    }
+
+
+    public FetchResultsResponseBody resultType(ResultType resultType) {
+        this.resultType = resultType;
+        return this;
+    }
+
+    /**
+     * Get resultType
+     *
+     * @return resultType
+     **/
+    //@javax.annotation.Nullable
+    public ResultType getResultType() {
+        return resultType;
+    }
+
+    public void setResultType(ResultType resultType) {
+        this.resultType = resultType;
+    }
+
+
+    public FetchResultsResponseBody results(ResultInfo results) {
+        this.results = results;
+        return this;
+    }
+
+    /**
+     * Get results
+     *
+     * @return results
+     **/
+    //@javax.annotation.Nullable
+    public ResultInfo getResults() {
+        return results;
+    }
+
+    public void setResults(ResultInfo results) {
+        this.results = results;
+    }
+
+
     @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!FetchResultsResponseBody.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'FetchResultsResponseBody' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<FetchResultsResponseBody> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(FetchResultsResponseBody.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<FetchResultsResponseBody>() {
-           @Override
-           public void write(JsonWriter out, FetchResultsResponseBody value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public FetchResultsResponseBody read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        FetchResultsResponseBody fetchResultsResponseBody = (FetchResultsResponseBody) o;
+        return Objects.equals(this.jobID, fetchResultsResponseBody.jobID) &&
+                Objects.equals(this.nextResultUri, fetchResultsResponseBody.nextResultUri) &&
+                Objects.equals(this.queryResult, fetchResultsResponseBody.queryResult) &&
+                Objects.equals(this.resultKind, fetchResultsResponseBody.resultKind) &&
+                Objects.equals(this.resultType, fetchResultsResponseBody.resultType) &&
+                Objects.equals(this.results, fetchResultsResponseBody.results);
     }
-  }
 
- /**
-  * Create an instance of FetchResultsResponseBody given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of FetchResultsResponseBody
-  * @throws IOException if the JSON string is invalid with respect to FetchResultsResponseBody
-  */
-  public static FetchResultsResponseBody fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, FetchResultsResponseBody.class);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(jobID, nextResultUri, queryResult, resultKind, resultType, results);
+    }
 
- /**
-  * Convert an instance of FetchResultsResponseBody to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class FetchResultsResponseBody {\n");
+        sb.append("    jobID: ").append(toIndentedString(jobID)).append("\n");
+        sb.append("    nextResultUri: ").append(toIndentedString(nextResultUri)).append("\n");
+        sb.append("    queryResult: ").append(toIndentedString(queryResult)).append("\n");
+        sb.append("    resultKind: ").append(toIndentedString(resultKind)).append("\n");
+        sb.append("    resultType: ").append(toIndentedString(resultType)).append("\n");
+        sb.append("    results: ").append(toIndentedString(results)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+
+
+    public static HashSet<String> openapiFields;
+    public static HashSet<String> openapiRequiredFields;
+
+    static {
+        // a set of all properties/fields (JSON key names)
+        openapiFields = new HashSet<String>();
+        openapiFields.add("jobID");
+        openapiFields.add("nextResultUri");
+        openapiFields.add("queryResult");
+        openapiFields.add("resultKind");
+        openapiFields.add("resultType");
+        openapiFields.add("results");
+
+        // a set of required properties/fields (JSON key names)
+        openapiRequiredFields = new HashSet<String>();
+    }
+
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to FetchResultsResponseBody
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        if (jsonElement == null) {
+            if (!FetchResultsResponseBody.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+                throw new IllegalArgumentException(String.format("The required field(s) %s in FetchResultsResponseBody is not found in the empty JSON string", FetchResultsResponseBody.openapiRequiredFields.toString()));
+            }
+        }
+
+        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+        // check to see if the JSON string contains additional fields
+        for (Map.Entry<String, JsonElement> entry : entries) {
+            if (!FetchResultsResponseBody.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FetchResultsResponseBody` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+            }
+        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+        if ((jsonObj.get("jobID") != null && !jsonObj.get("jobID").isJsonNull()) && !jsonObj.get("jobID").isJsonPrimitive()) {
+            throw new IllegalArgumentException(String.format("Expected the field `jobID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("jobID").toString()));
+        }
+        if ((jsonObj.get("nextResultUri") != null && !jsonObj.get("nextResultUri").isJsonNull()) && !jsonObj.get("nextResultUri").isJsonPrimitive()) {
+            throw new IllegalArgumentException(String.format("Expected the field `nextResultUri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nextResultUri").toString()));
+        }
+        // validate the optional field `resultKind`
+        if (jsonObj.get("resultKind") != null && !jsonObj.get("resultKind").isJsonNull()) {
+            ResultKind.validateJsonElement(jsonObj.get("resultKind"));
+        }
+        // validate the optional field `resultType`
+        if (jsonObj.get("resultType") != null && !jsonObj.get("resultType").isJsonNull()) {
+            ResultType.validateJsonElement(jsonObj.get("resultType"));
+        }
+        // validate the optional field `results`
+        if (jsonObj.get("results") != null && !jsonObj.get("results").isJsonNull()) {
+            ResultInfo.validateJsonElement(jsonObj.get("results"));
+        }
+    }
+
+    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+            if (!FetchResultsResponseBody.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'FetchResultsResponseBody' and its subtypes
+            }
+            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+            final TypeAdapter<FetchResultsResponseBody> thisAdapter
+                    = gson.getDelegateAdapter(this, TypeToken.get(FetchResultsResponseBody.class));
+
+            return (TypeAdapter<T>) new TypeAdapter<FetchResultsResponseBody>() {
+                @Override
+                public void write(JsonWriter out, FetchResultsResponseBody value) throws IOException {
+                    JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+                    elementAdapter.write(out, obj);
+                }
+
+                @Override
+                public FetchResultsResponseBody read(JsonReader in) throws IOException {
+                    JsonElement jsonElement = elementAdapter.read(in);
+                    validateJsonElement(jsonElement);
+                    return thisAdapter.fromJsonTree(jsonElement);
+                }
+
+            }.nullSafe();
+        }
+    }
+
+    /**
+     * Create an instance of FetchResultsResponseBody given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of FetchResultsResponseBody
+     * @throws IOException if the JSON string is invalid with respect to FetchResultsResponseBody
+     */
+    public static FetchResultsResponseBody fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, FetchResultsResponseBody.class);
+    }
+
+    /**
+     * Convert an instance of FetchResultsResponseBody to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

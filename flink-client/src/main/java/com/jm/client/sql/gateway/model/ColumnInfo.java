@@ -30,215 +30,217 @@ import java.util.Set;
  * ColumnInfo
  */
 public class ColumnInfo {
-  public static final String SERIALIZED_NAME_COMMENT = "comment";
-  @SerializedName(SERIALIZED_NAME_COMMENT)
-  private String comment;
+    public static final String SERIALIZED_NAME_COMMENT = "comment";
+    @SerializedName(SERIALIZED_NAME_COMMENT)
+    private String comment;
 
-  public static final String SERIALIZED_NAME_LOGICAL_TYPE = "logicalType";
-  @SerializedName(SERIALIZED_NAME_LOGICAL_TYPE)
-  private LogicalType logicalType;
+    public static final String SERIALIZED_NAME_LOGICAL_TYPE = "logicalType";
+    @SerializedName(SERIALIZED_NAME_LOGICAL_TYPE)
+    private LogicalType logicalType;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    public static final String SERIALIZED_NAME_NAME = "name";
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-  public ColumnInfo() {
-  }
-
-  public ColumnInfo comment(String comment) {
-    this.comment = comment;
-    return this;
-  }
-
-   /**
-   * Get comment
-   * @return comment
-  **/
-  //@javax.annotation.Nullable
-  public String getComment() {
-    return comment;
-  }
-
-  public void setComment(String comment) {
-    this.comment = comment;
-  }
-
-
-  public ColumnInfo logicalType(LogicalType logicalType) {
-    this.logicalType = logicalType;
-    return this;
-  }
-
-   /**
-   * Get logicalType
-   * @return logicalType
-  **/
-  //@javax.annotation.Nullable
-  public LogicalType getLogicalType() {
-    return logicalType;
-  }
-
-  public void setLogicalType(LogicalType logicalType) {
-    this.logicalType = logicalType;
-  }
-
-
-  public ColumnInfo name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  //@javax.annotation.Nullable
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public ColumnInfo() {
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public ColumnInfo comment(String comment) {
+        this.comment = comment;
+        return this;
     }
-    ColumnInfo columnInfo = (ColumnInfo) o;
-    return Objects.equals(this.comment, columnInfo.comment) &&
-        Objects.equals(this.logicalType, columnInfo.logicalType) &&
-        Objects.equals(this.name, columnInfo.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(comment, logicalType, name);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ColumnInfo {\n");
-    sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
-    sb.append("    logicalType: ").append(toIndentedString(logicalType)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get comment
+     *
+     * @return comment
+     **/
+    //@javax.annotation.Nullable
+    public String getComment() {
+        return comment;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
 
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
+    public ColumnInfo logicalType(LogicalType logicalType) {
+        this.logicalType = logicalType;
+        return this;
+    }
 
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("comment");
-    openapiFields.add("logicalType");
-    openapiFields.add("name");
+    /**
+     * Get logicalType
+     *
+     * @return logicalType
+     **/
+    //@javax.annotation.Nullable
+    public LogicalType getLogicalType() {
+        return logicalType;
+    }
 
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
+    public void setLogicalType(LogicalType logicalType) {
+        this.logicalType = logicalType;
+    }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ColumnInfo
-  */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ColumnInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ColumnInfo is not found in the empty JSON string", ColumnInfo.openapiRequiredFields.toString()));
-        }
-      }
 
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ColumnInfo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ColumnInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
-        }
-      }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if ((jsonObj.get("comment") != null && !jsonObj.get("comment").isJsonNull()) && !jsonObj.get("comment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `comment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comment").toString()));
-      }
-      // validate the optional field `logicalType`
-      if (jsonObj.get("logicalType") != null && !jsonObj.get("logicalType").isJsonNull()) {
-        LogicalType.validateJsonElement(jsonObj.get("logicalType"));
-      }
-      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-  }
+    public ColumnInfo name(String name) {
+        this.name = name;
+        return this;
+    }
 
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
+    /**
+     * Get name
+     *
+     * @return name
+     **/
+    //@javax.annotation.Nullable
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ColumnInfo.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ColumnInfo' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ColumnInfo> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ColumnInfo.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ColumnInfo>() {
-           @Override
-           public void write(JsonWriter out, ColumnInfo value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ColumnInfo read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
-           }
-
-       }.nullSafe();
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ColumnInfo columnInfo = (ColumnInfo) o;
+        return Objects.equals(this.comment, columnInfo.comment) &&
+                Objects.equals(this.logicalType, columnInfo.logicalType) &&
+                Objects.equals(this.name, columnInfo.name);
     }
-  }
 
- /**
-  * Create an instance of ColumnInfo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ColumnInfo
-  * @throws IOException if the JSON string is invalid with respect to ColumnInfo
-  */
-  public static ColumnInfo fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ColumnInfo.class);
-  }
+    @Override
+    public int hashCode() {
+        return Objects.hash(comment, logicalType, name);
+    }
 
- /**
-  * Convert an instance of ColumnInfo to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ColumnInfo {\n");
+        sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
+        sb.append("    logicalType: ").append(toIndentedString(logicalType)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces
+     * (except the first line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
+
+
+    public static HashSet<String> openapiFields;
+    public static HashSet<String> openapiRequiredFields;
+
+    static {
+        // a set of all properties/fields (JSON key names)
+        openapiFields = new HashSet<String>();
+        openapiFields.add("comment");
+        openapiFields.add("logicalType");
+        openapiFields.add("name");
+
+        // a set of required properties/fields (JSON key names)
+        openapiRequiredFields = new HashSet<String>();
+    }
+
+    /**
+     * Validates the JSON Element and throws an exception if issues found
+     *
+     * @param jsonElement JSON Element
+     * @throws IOException if the JSON Element is invalid with respect to ColumnInfo
+     */
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        if (jsonElement == null) {
+            if (!ColumnInfo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+                throw new IllegalArgumentException(String.format("The required field(s) %s in ColumnInfo is not found in the empty JSON string", ColumnInfo.openapiRequiredFields.toString()));
+            }
+        }
+
+        Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+        // check to see if the JSON string contains additional fields
+        for (Map.Entry<String, JsonElement> entry : entries) {
+            if (!ColumnInfo.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ColumnInfo` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+            }
+        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+        if ((jsonObj.get("comment") != null && !jsonObj.get("comment").isJsonNull()) && !jsonObj.get("comment").isJsonPrimitive()) {
+            throw new IllegalArgumentException(String.format("Expected the field `comment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comment").toString()));
+        }
+        // validate the optional field `logicalType`
+        if (jsonObj.get("logicalType") != null && !jsonObj.get("logicalType").isJsonNull()) {
+            LogicalType.validateJsonElement(jsonObj.get("logicalType"));
+        }
+        if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+            throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+        }
+    }
+
+    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+        @SuppressWarnings("unchecked")
+        @Override
+        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+            if (!ColumnInfo.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'ColumnInfo' and its subtypes
+            }
+            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+            final TypeAdapter<ColumnInfo> thisAdapter
+                    = gson.getDelegateAdapter(this, TypeToken.get(ColumnInfo.class));
+
+            return (TypeAdapter<T>) new TypeAdapter<ColumnInfo>() {
+                @Override
+                public void write(JsonWriter out, ColumnInfo value) throws IOException {
+                    JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+                    elementAdapter.write(out, obj);
+                }
+
+                @Override
+                public ColumnInfo read(JsonReader in) throws IOException {
+                    JsonElement jsonElement = elementAdapter.read(in);
+                    validateJsonElement(jsonElement);
+                    return thisAdapter.fromJsonTree(jsonElement);
+                }
+
+            }.nullSafe();
+        }
+    }
+
+    /**
+     * Create an instance of ColumnInfo given an JSON string
+     *
+     * @param jsonString JSON string
+     * @return An instance of ColumnInfo
+     * @throws IOException if the JSON string is invalid with respect to ColumnInfo
+     */
+    public static ColumnInfo fromJson(String jsonString) throws IOException {
+        return JSON.getGson().fromJson(jsonString, ColumnInfo.class);
+    }
+
+    /**
+     * Convert an instance of ColumnInfo to an JSON string
+     *
+     * @return JSON string
+     */
+    public String toJson() {
+        return JSON.getGson().toJson(this);
+    }
 }
 

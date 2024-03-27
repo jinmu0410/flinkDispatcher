@@ -26,51 +26,51 @@ import java.io.IOException;
  */
 @JsonAdapter(ConstraintType.Adapter.class)
 public enum ConstraintType {
-  
-  PRIMARY_KEY("PRIMARY_KEY"),
-  
-  UNIQUE_KEY("UNIQUE_KEY");
 
-  private String value;
+    PRIMARY_KEY("PRIMARY_KEY"),
 
-  ConstraintType(String value) {
-    this.value = value;
-  }
+    UNIQUE_KEY("UNIQUE_KEY");
 
-  public String getValue() {
-    return value;
-  }
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static ConstraintType fromValue(String value) {
-    for (ConstraintType b : ConstraintType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    ConstraintType(String value) {
+        this.value = value;
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
-  }
 
-  public static class Adapter extends TypeAdapter<ConstraintType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final ConstraintType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public ConstraintType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return ConstraintType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
 
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-    String value = jsonElement.getAsString();
-    ConstraintType.fromValue(value);
-  }
+    public static ConstraintType fromValue(String value) {
+        for (ConstraintType b : ConstraintType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ConstraintType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final ConstraintType enumeration) throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public ConstraintType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return ConstraintType.fromValue(value);
+        }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+        String value = jsonElement.getAsString();
+        ConstraintType.fromValue(value);
+    }
 }
 
