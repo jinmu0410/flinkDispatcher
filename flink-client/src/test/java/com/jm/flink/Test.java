@@ -151,7 +151,6 @@ public class Test {
         options.setJobContent(sourceSql + sinkMysql + resultSql);
         options.setJobType("sql");
         options.setMode("standalone");
-        options.setFormatType("test");
         return options;
     }
 }

@@ -56,9 +56,6 @@ public class JobOptions implements Serializable {
     @OptionRequired(required = false, description = "attach jobParams")
     private String jobParams = "{}";
 
-    @OptionRequired(required = false, description = "attach jobParams")
-    private String formatType;
-
     public String getJobType() {
         return jobType;
     }
@@ -123,11 +120,4 @@ public class JobOptions implements Serializable {
         this.envParams = envParams;
     }
 
-    public void setFormatType(String formatType) {
-        this.formatType = formatType;
-    }
-
-    public String getFormatType() {
-        return formatType;
-    }
 }
