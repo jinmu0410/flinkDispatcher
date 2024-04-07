@@ -1,6 +1,8 @@
 package com.jm.flink.bean;
 
 
+import com.jm.flink.conf.*;
+
 import java.io.Serializable;
 
 /**

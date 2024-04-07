@@ -18,7 +18,7 @@
 package com.jm.flink.bean;
 
 
-import com.jm.flink.base.utils.OptionRequired;
+import com.jm.flink.utils.OptionRequired;
 
 import java.io.Serializable;
 
