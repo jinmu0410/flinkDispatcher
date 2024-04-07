@@ -30,7 +30,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author tasher @ClassName Launcher.java @Description TODO
+ * @author jinmu @ClassName Launcher.java @Description TODO
  * @createTime 2022/04/29
  */
 public class Launcher {
@@ -41,7 +41,7 @@ public class Launcher {
      * loadLog4jSetting
      *
      * @return void
-     * @author tasher
+     * @author jinmu
      * @created 2022/5/11
      */
     static {

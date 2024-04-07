@@ -3,7 +3,7 @@ package com.jm.flink.base.utils;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName SnowflakeIdWorkerUtil.java @Description TODO
+ * @author jinmu @ClassName SnowflakeIdWorkerUtil.java @Description TODO
  * @createTime 2022/04/08
  */
 public class SnowflakeIdWorkerUtil implements Serializable {

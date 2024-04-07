@@ -18,34 +18,34 @@ import static com.jm.flink.constant.FlinkDoConstants.MAIN_CLASS;
 public abstract class AbstractYarnJobClientHelper implements JobClientHelper {
 
     protected ClusterSpecification createClusterSpecification(JobOptions jobOptions) {
-//        Configuration flinkConfiguration = FlinkEnvHelper.loadFlinkConfiguration(jobOptions);
-//        int jobManagerMemoryMb = 1024;
-//        int taskManagerMemoryMb = 1024;
-//        int slotsPerTaskManager = FlinkDoPluginConstants.TM_NUM_TASK_SLOTS.defaultValue();
-//
-//        // jobmanager.memory.process.size
-//        if(flinkConfiguration.containsKey(FlinkDoPluginConstants.JM_MEM_PROCESS_MEMORY.key())) {
-//            Integer tmpVal = ValueUtil.parserStr(flinkConfiguration.getString(FlinkDoPluginConstants.JM_MEM_PROCESS_MEMORY));
-//            if(null != tmpVal){
-//                jobManagerMemoryMb = tmpVal;
-//            }
-//        }
-//        // taskmanager.memory.process.size taskmanager.memory.framework.heap.size
-//        if(flinkConfiguration.containsKey(FlinkDoPluginConstants.TM_MEM_PROCESS_MEMORY.key())) {
-//            Integer tmpVal = ValueUtil.parserStr(flinkConfiguration.getString(FlinkDoPluginConstants.TM_MEM_PROCESS_MEMORY));
-//            if(null != tmpVal){
-//                taskManagerMemoryMb = tmpVal;
-//            }
-//        }
-//        // taskmanager.numberOfTaskSlots
-//        if (flinkConfiguration.containsKey(FlinkDoPluginConstants.TM_NUM_TASK_SLOTS.key())) {
-//            slotsPerTaskManager = flinkConfiguration.getInteger(FlinkDoPluginConstants.TM_NUM_TASK_SLOTS);
-//        }
+        Configuration flinkConfiguration = FlinkEnvHelper.loadFlinkConfiguration(jobOptions);
+        int jobManagerMemoryMb = 1024;
+        int taskManagerMemoryMb = 1024;
+        int slotsPerTaskManager = FlinkDoPluginConstants.TM_NUM_TASK_SLOTS.defaultValue();
+
+        // jobmanager.memory.process.size
+        if(flinkConfiguration.containsKey(FlinkDoPluginConstants.JM_MEM_PROCESS_MEMORY.key())) {
+            Integer tmpVal = ValueUtil.parserStr(flinkConfiguration.getString(FlinkDoPluginConstants.JM_MEM_PROCESS_MEMORY));
+            if(null != tmpVal){
+                jobManagerMemoryMb = tmpVal;
+            }
+        }
+        // taskmanager.memory.process.size taskmanager.memory.framework.heap.size
+        if(flinkConfiguration.containsKey(FlinkDoPluginConstants.TM_MEM_PROCESS_MEMORY.key())) {
+            Integer tmpVal = ValueUtil.parserStr(flinkConfiguration.getString(FlinkDoPluginConstants.TM_MEM_PROCESS_MEMORY));
+            if(null != tmpVal){
+                taskManagerMemoryMb = tmpVal;
+            }
+        }
+        // taskmanager.numberOfTaskSlots
+        if (flinkConfiguration.containsKey(FlinkDoPluginConstants.TM_NUM_TASK_SLOTS.key())) {
+            slotsPerTaskManager = flinkConfiguration.getInteger(FlinkDoPluginConstants.TM_NUM_TASK_SLOTS);
+        }
         ClusterSpecification clusterSpecification =
                 new ClusterSpecification.ClusterSpecificationBuilder()
-                        .setMasterMemoryMB(1024)
-                        .setTaskManagerMemoryMB(1024)
-                        .setSlotsPerTaskManager(1)
+                        .setMasterMemoryMB(jobManagerMemoryMb)
+                        .setTaskManagerMemoryMB(taskManagerMemoryMb)
+                        .setSlotsPerTaskManager(slotsPerTaskManager)
                         .createClusterSpecification();
 
         return clusterSpecification;

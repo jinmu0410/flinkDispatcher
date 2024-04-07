@@ -25,7 +25,7 @@ import java.io.Serializable;
 /**
  * 任务提交参数
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/8
  */
 public class JobOptions implements Serializable {

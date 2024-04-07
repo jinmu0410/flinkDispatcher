@@ -7,7 +7,7 @@ import com.jm.flink.helper.JobDeployHelper;
 /**
  * 客户端任务接口类
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/8
  */
 public interface JobClientHelper {

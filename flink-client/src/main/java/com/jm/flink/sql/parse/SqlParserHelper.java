@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * SqlParserHelper.java
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/5/5
  * @return
  */
@@ -51,7 +51,7 @@ public class SqlParserHelper {
      * 解析器链路
      *
      * @return com.hk.szyc.flinkdo.main.core.sql.parse.AbstractStmtParser
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     private static AbstractStmtParser createParserChain() {
@@ -71,7 +71,7 @@ public class SqlParserHelper {
      *
      * @param functionDefBeans
      * @return java.util.List<com.hk.szyc.flinkdo.core.function.FunctionDefBean>
-     * @author tasher
+     * @author jinmu
      * @param: sql
      * @created 2022/7/4
      */
@@ -101,7 +101,7 @@ public class SqlParserHelper {
      *
      * @param tableEnvironment
      * @return org.apache.flink.table.api.StatementSet
-     * @author tasher
+     * @author jinmu
      * @param: sql
      * @param: urlList 应对的是自定义创建函数/添加JAR包
      * @created 2022/4/11

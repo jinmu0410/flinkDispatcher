@@ -21,7 +21,7 @@ package com.jm.flink.base.enums;
 /**
  * 远程存储类型
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public enum StorageType {

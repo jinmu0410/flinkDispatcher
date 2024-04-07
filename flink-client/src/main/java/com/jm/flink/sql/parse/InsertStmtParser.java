@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * DML Insert
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public class InsertStmtParser extends AbstractStmtParser {

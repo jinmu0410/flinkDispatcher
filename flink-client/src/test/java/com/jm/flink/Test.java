@@ -95,7 +95,7 @@ public class Test {
         envParams.setHadoopConfDir("/Users/jinmu/Downloads/hs-conf");
         envParams.setPluginMode("shipfile");
         envParams.setJobManagerRpcAddress("127.0.0.1");
-        //envParams.setPluginPath("/Users/tasher/Downloads/hk_workspace/szyc-flinkdo/flinkdo-dist/plugins");
+        //envParams.setPluginPath("/Users/jinmu/Downloads/hk_workspace/szyc-flinkdo/flinkdo-dist/plugins");
 
 
         // flink属性配置(这里需要进行一些优化配置)【当采用了HDFS flink lib 以后，那么关于FLINK的相关配置都在动态配置中】

@@ -4,7 +4,7 @@ package com.jm.flink.base.enums;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName LauncherStatus.java
+ * @author jinmu @ClassName LauncherStatus.java
  * @Description program run status
  * @createTime 2022/02/18
  */

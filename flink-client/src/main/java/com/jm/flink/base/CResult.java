@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 业务结果集
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/5/2
  */
 @SuppressWarnings("unchecked")

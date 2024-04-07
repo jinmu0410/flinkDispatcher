@@ -26,7 +26,7 @@ import java.io.Serializable;
 /**
  * 插件同步任务使用
  *
- * @author tasher
+ * @author jinmu
  */
 public class SyncJobConf implements Serializable {
 

@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 /**
  * YarnPerJobClusterJobClientHelper
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/13
  */
 public class YarnApplicationClusterJobClientHelper extends AbstractYarnJobClientHelper {

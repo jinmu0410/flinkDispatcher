@@ -10,6 +10,7 @@
     <modules>
         <module>flink-client</module>
         <module>flink-version</module>
+        <module>flink-sdk</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -19,6 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <flink.version>1.17.1</flink.version>
+        <hadoop.version>3.0.0</hadoop.version>
         <flink.main.version>1.17</flink.main.version>
         <satoken.version>1.35.0.RC</satoken.version>
         <spring-boot-admin.version>3.1.5</spring-boot-admin.version>

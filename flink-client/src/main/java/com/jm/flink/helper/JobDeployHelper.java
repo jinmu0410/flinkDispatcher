@@ -26,7 +26,7 @@ import com.jm.flink.base.utils.JsonUtil;
 /**
  * 任务环境提交类 备注: 扩展系统初始相关参数使用
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/8
  */
 public class JobDeployHelper {

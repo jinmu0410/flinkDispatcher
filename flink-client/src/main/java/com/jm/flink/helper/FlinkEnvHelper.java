@@ -61,7 +61,7 @@ import static com.jm.flink.constant.FlinkDoConstants.FLINK_VERSION_DIST_JAR;
  * <p>=== 对于生产环境服务环境明确采用这种方式 指定JVM堆内存大小: taskmanager.memory.task.heap.size: 2048m 指定JVM托管内存大小:
  * taskmanager.memory.managed.size: 512m
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -105,7 +105,7 @@ public class FlinkEnvHelper {
      *
      * @param jobOptions
      * @return com.hk.szyc.flinkdo.core.base.bean.EnvParams
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/15
      */
     public static EnvParams loadEnvParams(JobOptions jobOptions) {
@@ -120,7 +120,7 @@ public class FlinkEnvHelper {
      *
      * @param jobOptions
      * @return org.apache.hadoop.yarn.conf.YarnConfiguration
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/15
      */
     public static YarnConfiguration loadHadoopConfig(JobOptions jobOptions) {
@@ -152,7 +152,7 @@ public class FlinkEnvHelper {
      *
      * @param jobOptions
      * @return org.apache.flink.configuration.Configuration
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     @SuppressWarnings("unchecked")
@@ -253,7 +253,7 @@ public class FlinkEnvHelper {
      *
      * @param envParams
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: configuration
      * @created 2022/4/11
      */
@@ -300,7 +300,7 @@ public class FlinkEnvHelper {
      *
      * @param flinkConfiguration
      * @return org.apache.flink.client.deployment.ClusterSpecification
-     * @author tasher
+     * @author jinmu
      * @created 2022/2/22
      */
     public static ClusterSpecification createClusterSpecification(
@@ -316,7 +316,7 @@ public class FlinkEnvHelper {
      * <p>会加载FLINK配置环境 会加载Hadoop配置环境 会按需上传JAR
      *
      * @return org.apache.flink.yarn.YarnClusterDescriptor
-     * @author tasher
+     * @author jinmu
      * @param: jobOptions
      * @created 2022/4/16
      */

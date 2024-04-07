@@ -6,7 +6,7 @@ import com.jm.flink.base.utils.OptionRequired;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName EnvParams.java @Description 环境运行参数配置(主要设计大数据底层相关中间件环境配置)
+ * @author jinmu @ClassName EnvParams.java @Description 环境运行参数配置(主要设计大数据底层相关中间件环境配置)
  */
 public class EnvParams implements Serializable {
 

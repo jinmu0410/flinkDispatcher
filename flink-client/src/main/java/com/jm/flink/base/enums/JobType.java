@@ -23,7 +23,7 @@ import org.apache.commons.lang.StringUtils;
 /**
  * 任务类型
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public enum JobType {

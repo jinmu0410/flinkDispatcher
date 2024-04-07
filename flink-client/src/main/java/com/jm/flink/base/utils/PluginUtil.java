@@ -116,7 +116,7 @@ public class PluginUtil {
      *
      * @param pluginRoot
      * @return java.util.Set<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @param: pluginName
      * @created 2022/4/24
      */
@@ -228,7 +228,7 @@ public class PluginUtil {
      *
      * @param envParams
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @created 2022/4/24
      */
@@ -319,7 +319,7 @@ public class PluginUtil {
      *
      * @param shipJars
      * @return java.util.List<java.lang.String>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static Set<URL> getShipJars(String shipJars) throws MalformedURLException {
@@ -347,7 +347,7 @@ public class PluginUtil {
      *
      * @param pluginRoot
      * @return java.util.Set<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/13
      */
     @SuppressWarnings("DuplicatedCode")
@@ -406,7 +406,7 @@ public class PluginUtil {
      *
      * @param classPathSet
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @created 2022/4/11
      */
@@ -504,7 +504,7 @@ public class PluginUtil {
      *
      * @param libPath
      * @return java.util.Set<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/13
      */
     public static Set<URL> getUserJarsByLib(String libPath) {
@@ -538,7 +538,7 @@ public class PluginUtil {
      *
      * @param urlSet
      * @return void
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/24
      */
     private static void localClassLoader(Set<URL> urlSet) {

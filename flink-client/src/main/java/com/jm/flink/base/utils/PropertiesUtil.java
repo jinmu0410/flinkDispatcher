@@ -32,7 +32,7 @@ import java.util.Properties;
 /**
  * 属性配置解析
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/9
  */
 public class PropertiesUtil {
@@ -42,7 +42,7 @@ public class PropertiesUtil {
      *
      * @param confStr
      * @return java.util.Properties
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/9
      */
     public static Properties parseConf(String confStr) {
@@ -75,7 +75,7 @@ public class PropertiesUtil {
      *
      * @param confProperties
      * @return java.util.Properties
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/9
      */
     public static Properties propertiesTrim(Properties confProperties) {

@@ -56,7 +56,7 @@ import java.util.regex.Pattern;
 /**
  * 环境加载
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/18
  */
 public class EnvPluginHelper {
@@ -72,7 +72,7 @@ public class EnvPluginHelper {
      *
      * @param deployMode
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @param: envParams
      * @created 2022/4/24
@@ -106,7 +106,7 @@ public class EnvPluginHelper {
      *
      * @param jobOptions
      * @return org.apache.flink.configuration.Configuration
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     @SuppressWarnings("unchecked")
@@ -161,7 +161,7 @@ public class EnvPluginHelper {
      *
      * @param jobOptions
      * @return org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/10
      */
     public static StreamExecutionEnvironment createStreamExecutionEnvironment(JobOptions jobOptions)
@@ -223,7 +223,7 @@ public class EnvPluginHelper {
                     // 设置用户配置
                     String backType = flinkConfiguration.getString(ConfigOptions.key(ConfigConstant.STATE_BACKEND_KEY).stringType().defaultValue("filesystem"));
                     if (!"filesystem".equals(backType)) {
-                        // 等待填充(目前只有HDFS可选) fixme to tasher
+                        // 等待填充(目前只有HDFS可选) fixme to jinmu
                     }
                 }
                 env.setStateBackend(new FsStateBackend(stateCheckDir));
@@ -237,7 +237,7 @@ public class EnvPluginHelper {
      *
      * @param properties
      * @return java.util.Optional<java.lang.Boolean>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/26
      */
     public static Optional<Boolean> isRestore(Configuration properties) {
@@ -272,7 +272,7 @@ public class EnvPluginHelper {
      *
      * @param flinkConfiguration
      * @return org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/24
      */
     public static StreamExecutionEnvironment getLocalStreamEnvironment(
@@ -304,7 +304,7 @@ public class EnvPluginHelper {
                     // 设置用户配置
                     String backType = flinkConfiguration.getString(ConfigOptions.key(ConfigConstant.STATE_BACKEND_KEY).stringType().defaultValue("filesystem"));
                     if (!"filesystem".equals(backType)) {
-                        // 等待填充(目前只有HDFS可选) fixme to tasher
+                        // 等待填充(目前只有HDFS可选) fixme to jinmu
                     }
                 }
                 flinkDoLocalStreamEnvironment.setStateBackend(new FsStateBackend(stateCheckDir));
@@ -318,7 +318,7 @@ public class EnvPluginHelper {
      *
      * @param jobOptions
      * @return org.apache.flink.table.api.bridge.java.StreamTableEnvironment
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @created 2022/4/24
      */

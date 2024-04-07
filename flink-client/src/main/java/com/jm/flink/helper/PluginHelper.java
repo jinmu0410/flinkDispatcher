@@ -54,7 +54,7 @@ import java.util.stream.Collectors;
 /**
  * 插件帮助类
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public class PluginHelper {
@@ -69,7 +69,7 @@ public class PluginHelper {
      * downloadUdf
      *
      * @return java.util.List<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/2/22
      */
     public static void downloadUdf(EnvParams envParams) {
@@ -186,7 +186,7 @@ public class PluginHelper {
      *
      * @param shipFileDir
      * @return java.util.List<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/2/22
      */
     public static List<URL> loadExternalURLUserDir(String shipFileDir) {
@@ -214,7 +214,7 @@ public class PluginHelper {
      *
      * @param shipFileDir
      * @return java.util.List<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/2/22
      */
     public static List<File> loadExternalFileUserDir(String shipFileDir) {
@@ -234,7 +234,7 @@ public class PluginHelper {
      *
      * @param shipJars
      * @return java.util.List<java.lang.String>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static List<File> getShipJarFiles(String shipJars) throws MalformedURLException {
@@ -262,7 +262,7 @@ public class PluginHelper {
      *
      * @param libPath
      * @return java.util.Set<java.net.URL>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/13
      */
     @SuppressWarnings("DuplicatedCode")

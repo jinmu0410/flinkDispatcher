@@ -46,7 +46,7 @@ import static org.apache.flink.configuration.CoreOptions.DEFAULT_PARALLELISM;
 /**
  * Flink作业构建帮助类
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/2/21
  * @return
  */
@@ -59,7 +59,7 @@ public class JobGraphHelper {
      *
      * @param jobOptions
      * @return org.apache.flink.runtime.jobgraph.JobGraph
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/13
      */
     public static JobGraph buildJobGraph(JobOptions jobOptions) throws Exception {

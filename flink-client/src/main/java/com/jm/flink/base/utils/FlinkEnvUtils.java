@@ -35,7 +35,7 @@ import java.io.UnsupportedEncodingException;
  * <p>=== 对于生产环境服务环境明确采用这种方式 指定JVM堆内存大小: taskmanager.memory.task.heap.size: 2048m 指定JVM托管内存大小:
  * taskmanager.memory.managed.size: 512m
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -53,7 +53,7 @@ public class FlinkEnvUtils {
      *
      * @param jobOptions
      * @return com.hk.szyc.flinkdo.core.base.bean.EnvParams
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/15
      */
     public static EnvParams loadEnvParams(JobOptions jobOptions) {

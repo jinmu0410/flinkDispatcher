@@ -5,7 +5,7 @@ import org.apache.flink.core.execution.JobClient;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName CallBackSubmit.java @Description 提交结果
+ * @author jinmu @ClassName CallBackSubmit.java @Description 提交结果
  * @createTime 2022/02/28
  */
 @SuppressWarnings("rawtypes")

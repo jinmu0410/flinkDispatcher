@@ -108,7 +108,7 @@ public class KerberosUtil {
      *
      * @param keytabPath
      * @return java.lang.String
-     * @author tasher
+     * @author jinmu
      * @param: configMap
      * @created 2022/6/30
      */

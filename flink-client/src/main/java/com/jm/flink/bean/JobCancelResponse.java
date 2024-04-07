@@ -3,7 +3,7 @@ package com.jm.flink.bean;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName CallBackCancelJob.java @Description 任务提交结果提交结果
+ * @author jinmu @ClassName CallBackCancelJob.java @Description 任务提交结果提交结果
  * @createTime 2022/02/28
  */
 @SuppressWarnings("rawtypes")

@@ -7,7 +7,7 @@ import org.apache.commons.lang.StringUtils;
 import java.util.HashMap;
 
 /**
- * @author tasher @ClassName JsonModifyUtil.java @Description TODO
+ * @author jinmu @ClassName JsonModifyUtil.java @Description TODO
  * @createTime 2022/04/11
  */
 public class JsonStringUtil {
@@ -26,7 +26,7 @@ public class JsonStringUtil {
      *
      * @param command
      * @return java.util.HashMap<java.lang.String, java.lang.String>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static HashMap<String, String> commandTransform(String command) {

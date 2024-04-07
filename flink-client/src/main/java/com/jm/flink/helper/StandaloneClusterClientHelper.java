@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 单机应用环境
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/8
  */
 public class StandaloneClusterClientHelper implements JobClientHelper {

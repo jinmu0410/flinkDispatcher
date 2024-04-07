@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * yarn 工具
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/2/21
  * @return
  */
@@ -41,7 +41,7 @@ public class YarnConfLoaderUtil {
      *
      * @param yarnConfDir
      * @return org.apache.hadoop.yarn.conf.YarnConfiguration
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static YarnConfiguration loadYarnConfInDir(String yarnConfDir) {
@@ -77,7 +77,7 @@ public class YarnConfLoaderUtil {
      *
      * @param yarnConf
      * @return org.apache.hadoop.conf.Configuration
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     private static Configuration haYarnConf(Configuration yarnConf) {

@@ -6,7 +6,7 @@ import com.jm.flink.base.conf.*;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName JobParams.java @Description 任务运行相关参数
+ * @author jinmu @ClassName JobParams.java @Description 任务运行相关参数
  * @createTime 2022/04/11
  */
 public class JobParams implements Serializable {

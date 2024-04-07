@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * 远程存储配置
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/6/30
  */
 public class RemoteStorageConf implements Serializable {

@@ -35,7 +35,7 @@ import java.util.regex.Pattern;
 /**
  * 创建函数解析器
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public class CreateFunctionStmtParser extends AbstractStmtParser {

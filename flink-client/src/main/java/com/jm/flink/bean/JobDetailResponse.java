@@ -5,7 +5,7 @@ import org.apache.flink.runtime.rest.messages.job.JobDetailsInfo;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName RequestJobDetail.java @Description 任务详情
+ * @author jinmu @ClassName RequestJobDetail.java @Description 任务详情
  * @createTime 2022/02/28
  */
 @SuppressWarnings("rawtypes")

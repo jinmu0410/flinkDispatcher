@@ -19,7 +19,7 @@ import java.io.IOException;
 /**
  * YarnSessionClusterJob
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/13
  */
 public class YarnSessionClusterJobClientHelper extends AbstractYarnJobClientHelper {

@@ -22,7 +22,7 @@ import java.io.Serializable;
 /**
  * 配置常量
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/8
  */
 public class FlinkDoConstants implements Serializable {

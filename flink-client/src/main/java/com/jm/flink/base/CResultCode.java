@@ -3,7 +3,7 @@ package com.jm.flink.base;
 /**
  * 返回结果接口定义
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/5/2
  */
 public interface CResultCode {

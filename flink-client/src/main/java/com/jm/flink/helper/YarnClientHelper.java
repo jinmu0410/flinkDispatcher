@@ -57,7 +57,7 @@ import static org.apache.flink.util.Preconditions.checkNotNull;
 /**
  * flink on yarn helper
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -70,7 +70,7 @@ public class YarnClientHelper {
      *
      * @param yarnConfiguration
      * @return org.apache.hadoop.yarn.client.api.YarnClient
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static YarnClient createSimpleYarnClient(YarnConfiguration yarnConfiguration) {
@@ -84,7 +84,7 @@ public class YarnClientHelper {
      *
      * @param applicationIdStr
      * @return org.apache.hadoop.yarn.api.records.ApplicationId
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static ApplicationId buildApplicationInstance(String applicationIdStr) {
@@ -156,7 +156,7 @@ public class YarnClientHelper {
      *
      * @param jobOptions
      * @return java.lang.Boolean
-     * @author tasher
+     * @author jinmu
      * @created 2022/3/1
      */
     public static Boolean disposeFlinkJobSavePoint(JobOptions jobOptions) {

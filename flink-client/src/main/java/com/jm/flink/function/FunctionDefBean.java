@@ -3,7 +3,7 @@ package com.jm.flink.function;
 import java.io.Serializable;
 
 /**
- * @author tasher
+ * @author jinmu
  * @ClassName FunctionDefBean.java
  * @Description TODO
  * @createTime 2022/07/01

@@ -47,7 +47,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * The FlinkRun class entry
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/9
  */
 public class Main {
@@ -109,7 +109,7 @@ public class Main {
      *
      * @param jobOptions
      * @return java.util.Optional<org.apache.flink.core.execution.JobClient>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/29
      */
     @SuppressWarnings("AlibabaSwitchStatement")
@@ -164,7 +164,7 @@ public class Main {
      *
      * @param jobOptions
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @param: tableEnv
      * @created 2022/4/11
@@ -231,7 +231,7 @@ public class Main {
      *
      * @param jobOptions
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: env
      * @param: tableEnv
      * @created 2022/4/11

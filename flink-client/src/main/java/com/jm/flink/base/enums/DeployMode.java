@@ -4,7 +4,7 @@ package com.jm.flink.base.enums;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @author tasher @ClassName DeployMode.java @Description flink run env
+ * @author jinmu @ClassName DeployMode.java @Description flink run env
  * @createTime 2022/02/18
  */
 public enum DeployMode {

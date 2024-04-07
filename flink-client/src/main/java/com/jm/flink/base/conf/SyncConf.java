@@ -60,7 +60,7 @@ public class SyncConf implements Serializable {
      * @param jobParamContent 围绕任务配置参数
      * @return com.hk.szyc.flinkdo.core.conf.SyncConf
      * @param: syncJobContent 同步任务配置内容
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/25
      */
     public static SyncConf parseJob(String syncJobContent, String jobParamContent) {

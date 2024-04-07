@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * SQL 分割
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -44,7 +44,7 @@ public class Splitter {
      *
      * @param string
      * @return java.util.List<java.lang.String>
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public List<String> splitEscaped(String string) {

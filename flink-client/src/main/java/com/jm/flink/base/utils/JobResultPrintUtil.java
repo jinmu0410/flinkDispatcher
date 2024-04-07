@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -40,7 +40,7 @@ public class JobResultPrintUtil {
      *
      * @param result
      * @return void
-     * @author tasher
+     * @author jinmu
      * @created 2022/4/11
      */
     public static void printSqlResult(Map<String, Object> result) {

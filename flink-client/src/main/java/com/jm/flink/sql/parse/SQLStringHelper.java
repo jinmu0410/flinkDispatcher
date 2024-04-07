@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 /**
  * sql 基本处理工具
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */

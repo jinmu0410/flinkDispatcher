@@ -39,7 +39,7 @@ import java.util.*;
 /**
  * Gson工具类，用于对json的序列化及反序列化，及解决int类型在map中被转换成double类型问题
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/9
  */
 public class GsonUtil {

@@ -5,7 +5,7 @@ import com.jm.flink.base.CResultCode;
 /**
  * 业务接口返回
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/5/2
  */
 public enum CResultCodeEnum implements CResultCode {

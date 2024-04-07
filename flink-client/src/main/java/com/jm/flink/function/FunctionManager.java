@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 自定义函数管理类
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  * @return
  */
@@ -57,7 +57,7 @@ public class FunctionManager {
      *
      * @param classLoader
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: type
      * @param: classPath
      * @param: funcName
@@ -87,7 +87,7 @@ public class FunctionManager {
      *
      * @param classLoader
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: classPath
      * @param: funcName
      * @param: tableEnv
@@ -113,7 +113,7 @@ public class FunctionManager {
      *
      * @param classLoader
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: classPath
      * @param: funcName
      * @param: tableEnv
@@ -142,7 +142,7 @@ public class FunctionManager {
      *
      * @param classLoader
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: classPath
      * @param: funcName
      * @param: tableEnv

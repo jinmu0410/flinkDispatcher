@@ -3,7 +3,7 @@ package com.jm.flink.base.enums;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @author tasher @ClassName FlinkPluginMode.java @Description TODO
+ * @author jinmu @ClassName FlinkPluginMode.java @Description TODO
  * @createTime 2022/02/18
  */
 public enum PluginMode {

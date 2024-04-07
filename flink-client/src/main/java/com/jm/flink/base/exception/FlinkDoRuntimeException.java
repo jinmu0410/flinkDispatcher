@@ -21,7 +21,7 @@ package com.jm.flink.base.exception;
 /**
  * flink job runtime exception useful
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public class FlinkDoRuntimeException extends RuntimeException {

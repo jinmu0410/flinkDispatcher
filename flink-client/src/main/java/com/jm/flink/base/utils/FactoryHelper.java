@@ -41,7 +41,7 @@ import static com.jm.flink.constant.FlinkDoConstants.CLASS_FILE_NAME_FMT;
 /**
  * 专注于加载插件环境
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/24
  */
 public class FactoryHelper {
@@ -93,7 +93,7 @@ public class FactoryHelper {
      *
      * @param ignore
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: factoryIdentifier
      * @param: classLoader
      * @created 2022/4/24

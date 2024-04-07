@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * parse a single SQL statement abstract class.
  *
- * @author tasher
+ * @author jinmu
  * @created 2022/4/11
  */
 public abstract class AbstractStmtParser {
@@ -60,7 +60,7 @@ public abstract class AbstractStmtParser {
      *
      * @param jarUrlList
      * @return void
-     * @author tasher
+     * @author jinmu
      * @param: stmt
      * @param: tableEnvironment
      * @param: statementSet

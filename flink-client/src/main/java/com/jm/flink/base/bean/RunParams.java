@@ -3,7 +3,7 @@ package com.jm.flink.base.bean;
 import java.io.Serializable;
 
 /**
- * @author tasher @ClassName RunParams.java
+ * @author jinmu @ClassName RunParams.java
  * @Description 程序运行参数
  */
 public class RunParams implements Serializable {

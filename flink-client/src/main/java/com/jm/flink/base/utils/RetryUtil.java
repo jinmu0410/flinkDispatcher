@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 /**
- * @author tasher @ClassName RetryUtil.java @Description TODO
+ * @author jinmu @ClassName RetryUtil.java @Description TODO
  * @createTime 2022/04/08
  */
 public final class RetryUtil {
